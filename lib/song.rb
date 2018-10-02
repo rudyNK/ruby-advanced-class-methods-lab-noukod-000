@@ -33,17 +33,7 @@ class Song
     @@all.find{|x| x.name == name}
   end
 
-  def self.find_or_create_by_name(name)
-      #if self.find_by_name(name) == nil
-        #self.create_by_name(name)
-      #else
-        #self.find_by_name(name)
-      #end
-      self.find_by_name(name) || self.create_by_name(name)
-      #the above statement is saying do this(if it is true) or that (if the first thing is not true and the second thing is true)
-  end
-
-  def self.alphabetical()
+    def self.alphabetical()
     #returns all the songs instances in ascending (a-z) alphabetical order.
     @@all.sort_by{|x| x.name}
   end
